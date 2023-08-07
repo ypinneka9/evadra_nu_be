@@ -62,13 +62,9 @@ func main() {
     
     router := gin.Default()
 	router.Use(CORSMiddleware())
-    router.LoadHTMLGlob("templates/*.tmpl.html")
 	
     router.GET("/persons", getPersons)
 	router.POST("/persons", postPersons)
-    router.GET("/", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "index.tmpl.html", nil)
-	})
 
     // router.Run("localhost:8080")
     router.Run(":" + port)
