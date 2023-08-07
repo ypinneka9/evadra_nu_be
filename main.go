@@ -85,6 +85,6 @@ func main() {
 	router.POST("/persons", postPersons)
     router.DELETE("/persons/:id", deletePerson)
 
-    router.Run("localhost:8080")
-    // router.Run(":" + port)
+    // router.Run("localhost:8080")
+    router.Run(":" + port)
 }
